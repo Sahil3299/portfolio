@@ -45,7 +45,7 @@ export default function Projects() {
           desc="Online blood donation platform using MERN stack."
           tags={["React", "Node.js", "MongoDB", "Express"]}
           url="https://blood-connect-teal.vercel.app/"
-          img="..assets/blood-donation.png"
+          img="https://give.do/static/img/logos/19I9/d4a6cf56-c46b-411d-9903-e2ed0defe9bf.png"
           variants={itemVariants}
         />
         <Project
@@ -87,6 +87,7 @@ function Project({ title, desc, tags, variants, url, img }) {
     </motion.div>
   );
 }
+
 
 
 
