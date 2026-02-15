@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import profile from "../assets/profile.jpg";
-import resume from "../assets/sahil_resume.pdf";
+import resume from "../assets/Sahil_Resume.pdf";
 
 export default function Hero() {
   const containerVariants = {
@@ -388,4 +388,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
