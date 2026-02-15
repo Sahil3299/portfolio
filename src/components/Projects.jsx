@@ -45,7 +45,7 @@ export default function Projects() {
           desc="Online blood donation platform using MERN stack."
           tags={["React", "Node.js", "MongoDB", "Express"]}
           url="https://blood-connect-teal.vercel.app/"
-          img="..assets/images/blood-connect.png"
+          img="..assets/blood-donation.png"
           variants={itemVariants}
         />
         <Project
@@ -53,7 +53,7 @@ export default function Projects() {
           desc="A full-stack real-time chat application built with the MERN stack."
           tags={["React", "Node.js", "MongoDB", "Express"]}
           url="https://github.com/Sahil3299/Chat-App"
-          img="..assets/images/Chat-app.png"
+          img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfXa2RFDRShkXH03IKgZgsWT069w_AKhsdcQ&s"
           variants={itemVariants}
         />
       </motion.div>
@@ -87,5 +87,6 @@ function Project({ title, desc, tags, variants, url, img }) {
     </motion.div>
   );
 }
+
 
 
