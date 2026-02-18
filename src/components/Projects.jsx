@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import bloodConnectImg from "../assets/blood-connect.png";
+import chatAppImg from "../assets/chatapp.png";
+import yelpcampImg from "../assets/yelpcamp.png";
 
 export default function Projects() {
   const containerVariants = {
@@ -45,7 +48,7 @@ export default function Projects() {
           desc="Online blood donation platform using MERN stack."
           tags={["React", "Node.js", "MongoDB", "Express"]}
           url="https://blood-connect-teal.vercel.app/"
-          img="https://give.do/static/img/logos/19I9/d4a6cf56-c46b-411d-9903-e2ed0defe9bf.png"
+          img={bloodConnectImg}
           variants={itemVariants}
         />
         <Project
@@ -53,7 +56,15 @@ export default function Projects() {
           desc="A full-stack real-time chat application built with the MERN stack."
           tags={["React", "Node.js", "MongoDB", "Express"]}
           url="https://github.com/Sahil3299/Chat-App"
-          img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfXa2RFDRShkXH03IKgZgsWT069w_AKhsdcQ&s"
+          img={chatAppImg}
+          variants={itemVariants}
+        />
+         <Project
+          title="Yelp-Camp"
+          desc="A full-stack Application  built with the MERN stack."
+          tags={["EJS", "Node.js", "MongoDB", "Express"]}
+          url="https://github.com/Sahil3299/YelpCamp"
+          img={yelpcampImg}
           variants={itemVariants}
         />
       </motion.div>
@@ -87,7 +98,3 @@ function Project({ title, desc, tags, variants, url, img }) {
     </motion.div>
   );
 }
-
-
-
-
