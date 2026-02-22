@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   const contacts = [
-    { icon: "✉️", label: "Email", value: "sahilshinde2402@email.com", link: "mailto:sahilshinde2402@email.com" },
-    { icon: "🐙", label: "GitHub", value: "github.com/Sahil3299", link: "https://github.com/Sahil3299" },
-    { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/sahil-shinde-3299", link: "https://www.linkedin.com/in/sahil-shinde-a30948329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", target: "_blank" }
+    { logo:"https://www.svgrepo.com/show/305463/email-outline.svg", icon: "✉️", label: "Email", value: "sahilshinde2402@email.com", link: "mailto:sahilshinde2402@email.com" },
+    { logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", icon: "🐙", label: "GitHub", value: "github.com/Sahil3299", link: "https://github.com/Sahil3299" },
+    { logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg", icon: "💼", label: "LinkedIn", value: "linkedin.com/in/sahil-shinde-3299", link: "https://www.linkedin.com/in/sahil-shinde-a30948329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", target: "_blank" }
   ];
 
   const containerVariants = {
@@ -58,7 +58,18 @@ export default function Contact() {
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="contact-icon">{contact.icon}</div>
+            <div className="contact-icon">
+              {contact.logo ? (
+                <img
+                  src={contact.logo}
+                  alt={`${contact.label} logo`}
+                  className="contact-logo"
+                  style={{ width: 40, height: 40, objectFit: 'contain' }}
+                />
+              ) : (
+                contact.icon
+              )}
+            </div>
             <h3>{contact.label}</h3>
             <p>{contact.value}</p>
           </motion.a>
