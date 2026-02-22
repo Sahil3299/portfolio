@@ -3,25 +3,28 @@ import { motion } from "framer-motion";
 export default function Skills() {
   const skillCategories = {
     Languages: [
-       { name: "HTML", icon: "🏗️" },
-      { name: "CSS", icon: "🎨" },
-      { name: "JavaScript", icon: "⚡" },
-      { name: "Python", icon: "🐍" },
-     { name: "Java", icon: "☕" },
-     { name: "C++", icon: "⚙️" }
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", icon: "🐍" },
+      { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", icon: "🔧" },
+      { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", icon: "⚡" },
+      { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", icon: "☕" },
+      { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", icon: "📄" },
+      { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", icon: "🎨" },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", icon: "⚡" },
+
     ],
     Frameworks: [
-     { name: "React", icon: "⚛️", highlight: true },
-      { name: "Node.js", icon: "🟢" },
-      { name: "Express", icon: "🚂" },
-      { name: "Tailwind CSS", icon: "🎯" },
-      { name: "Bootstrap", icon: "⭐" }
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", icon: "⚛️" },
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", icon: "🟢" },
+      {name: "Tailwind CSS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1280px-Tailwind_CSS_Logo.svg.png", icon: "🌬️" },
+      { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", icon: "🚀" },
+      { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", icon: "🅱️" }
     ],
     Tools: [
-      { name: "MongoDB", icon: "🍃" },
-      { name: "GitHub", icon: "🐙" },
-      { name: "Auth API", icon: "🔐" },
-      { name: "SQL", icon: "🗄️" }
+      { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", icon: "🐬" },
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", icon: "🍃" },
+      { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", icon: "📚" },
+      { name: "REST API", logo: null, icon: "🌐" },
     ]
   };
 
@@ -82,7 +85,13 @@ export default function Skills() {
                 whileHover={{ scale: 1.08, rotateZ: 3 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="skill-icon">{skill.icon}</div>
+                <div className="skill-icon">
+                  {skill.logo ? (
+                    <img src={skill.logo} alt={skill.name} style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+                  ) : (
+                    skill.icon
+                  )}
+                </div>
                 <span className="skill-name">{skill.name}</span>
                 {skill.highlight && <span className="highlight-note">Expert</span>}
               </motion.div>
