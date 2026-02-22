@@ -61,7 +61,7 @@ export default function Projects() {
         />
          <Project
           title="Yelp-Camp"
-          desc="A full-stack Application  built with the MERN stack."
+          desc="A full-stack campground review application where users can browse, create, and review campgrounds."
           tags={["EJS", "Node.js", "MongoDB", "Express"]}
           url="https://github.com/Sahil3299/YelpCamp"
           img={yelpcampImg}
