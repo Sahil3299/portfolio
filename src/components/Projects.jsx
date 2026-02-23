@@ -47,7 +47,7 @@ export default function Projects() {
           title="Blood Connect"
           desc="Online blood donation platform using MERN stack."
           tags={["React", "Node.js", "MongoDB", "Express"]}
-          url="https://blood-connect-teal.vercel.app/"
+          url="https://blood-connect-jwdg.vercel.app/"
           img={bloodConnectImg}
           variants={itemVariants}
         />
@@ -98,3 +98,4 @@ function Project({ title, desc, tags, variants, url, img }) {
     </motion.div>
   );
 }
+
